@@ -8,38 +8,38 @@
 один подарок - в одни руки).
 */
 
-$AccArray = array(); // хранилище для чисел
-$max      = 10000; // максимальное число
-$min      = 0; // минимальное число
-$count    = 1000; // количество чисел
-$i        = 0; // счетчик
+$AccArray = array();
+$max      = 10000;
+$min      = 0;
+$count    = 1000;
+$i        = 0;
 while ($i < $count) {
-    $random = rand($min, $max); // генерим случайное число
-    if (!in_array($random, $AccArray)) { // проверяем уникальность числа.
-        $AccArray[$i] = $random; // если уникальное, то записываем его в массив
+    $random = rand($min, $max);
+    if (!in_array($random, $AccArray)) { 
+        $AccArray[$i] = $random;
         $i++;
     }
 }
 
-$WinArray = array(); // хранилище для чисел
-$max      = 999; // максимальное число
-$min      = 0; // минимальное число
-$count    = 50; // количество чисел
-$i        = 0; // счетчик
+$WinArray = array();
+$max      = 999;
+$min      = 0;
+$count    = 50;
+$i        = 0;
 while ($i < $count) {
-    $random = rand($min, $max); // генерим случайное число
-    if (!in_array($random, $WinArray)) { // проверяем уникальность числа
-        $WinArray[$i] = $random; // если уникальное, то записываем его в массив
+    $random = rand($min, $max);
+    if (!in_array($random, $WinArray)) {
+        $WinArray[$i] = $random;
         $i++;
     }
 }
 
-$f     = 0; // первый элемент массива
-$i     = 1; // счетчик
+$f     = 0;
+$i     = 1; 
 $count = 50;
 while ($i < $count) {
-    $n = $WinArray[$f]; // получаем номера аккаунтов победителей в массиве AccArray
-    echo "$AccArray[$n]" . "/n"; //выводим номера аккаунтов победителей
+    $n = $WinArray[$f];
+    echo "$AccArray[$n]" . "/n";
     $i++;
     $f++;
 }
