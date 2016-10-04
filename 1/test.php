@@ -39,7 +39,7 @@ $i     = 1;
 $count = 50;
 while ($i < $count) {
     $n = $WinArray[$f];
-    echo "$AccArray[$n]" . "/n";
+    echo $AccArray[$n] . "\n";
     $i++;
     $f++;
 }
