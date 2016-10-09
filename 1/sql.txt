@@ -1,0 +1,13 @@
+create database shop;
+use shop;
+
+CREATE TABLE products (product_id INT(10) UNSIGNED PRIMARY KEY, model VARCHAR(255), cost DECIMAL(16,5));
+CREATE TABLE users (uid INT(10) UNSIGNED PRIMARY KEY, name VARCHAR(255), email VARCHAR(255));
+CREATE TABLE orders (order_id INT(10) UNSIGNED PRIMARY KEY, product_id INT(10) UNSIGNED, uid INT(10) UNSIGNED, status VARCHAR(255));
+
+INSERT INTO products VALUES ("1", "model01", "1000"), ("2", "model02", "1500"), ("3", "model03", "2000");
+INSERT INTO users VALUES ("111", "John", "john@email.com"), ("222", "Jack", "jack@email.com"), ("333", "Jane", "jane@email.com");
+INSERT INTO orders VALUES ("11", "2", "111", "completed"), ("12", "3", "222", "cancel"), ("13", "2", "333", "in-process");
+
+UPDATE products SET cost = cost + 300;
+SELECT * FROM users WHERE uid = (SELECT uid FROM orders WHERE status = "in-process"); 

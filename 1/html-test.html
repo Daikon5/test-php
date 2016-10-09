@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="" >
+      <meta name="keywords" content="">
+      <title>HTML5</title>
+   </head>
+   <body>
+      <div id="header">
+         <p>Здравствуй, пользователь.</p>
+      </div>
+      <div id="main">
+         <div id="sidebar-left">
+            <div id="menu">
+               <ul>
+                  <li><a href="/">Главная страница</a></li>
+                  <li><a href="/contact-us">Контакты</a></li>
+               </ul>
+            </div>
+         </div>
+         <div id="content">
+            <p>Это главная страница с текстом.</p>
+         </div>
+         <div id="sidebar-right">
+            <p>Войти на сайт:</p>
+            <form action="/login" method="POST">
+               <label for="email">Введите ваш email:</label> 
+               <input type="text" name="email" id="email" value="example@example.com">
+               <label for="password">Введите пароль:</label>
+               <input type="password" name="password" id="password">
+               <input type="submit" value="Войти">
+            </form>
+         </div>
+      </div>
+      <div id="footer">
+         <p>Сделано на HTML5</p>
+      </div>
+   </body>
+</html>
