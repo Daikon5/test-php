@@ -8,28 +8,28 @@
 один подарок - в одни руки).
 */
 
-$AccArray = array();
+$accArray = array();
 $max      = 10000;
 $min      = 0;
 $count    = 1000;
 $i        = 0;
 while ($i < $count) {
     $random = rand($min, $max);
-    if (!in_array($random, $AccArray)) { 
-        $AccArray[$i] = $random;
+    if (!in_array($random, $accArray)) { 
+        $accArray[$i] = $random;
         $i++;
     }
 }
 
-$WinArray = array();
+$winArray = array();
 $max      = 999;
 $min      = 0;
 $count    = 50;
 $i        = 0;
 while ($i < $count) {
     $random = rand($min, $max);
-    if (!in_array($random, $WinArray)) {
-        $WinArray[$i] = $random;
+    if (!in_array($random, $winArray)) {
+        $winArray[$i] = $random;
         $i++;
     }
 }
@@ -38,8 +38,8 @@ $f     = 0;
 $i     = 1; 
 $count = 50;
 while ($i < $count) {
-    $n = $WinArray[$f];
-    echo $AccArray[$n] . "\n";
+    $n = $winArray[$f];
+    echo $accArray[$n] . "\n";
     $i++;
     $f++;
 }
